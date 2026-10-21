@@ -1030,6 +1030,12 @@ a,
 	padding: var(--global-xs-spacing) var(--global-md-spacing);
 }
 
+@media (max-width: 991px) {
+  .MAG > .kt-row-column-wrap {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (pointer: coarse) and (max-width: 767px) {
 	.FULL {
 		border: 0 !important
