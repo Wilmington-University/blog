@@ -1,7 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
 * Browsers: > 0.3%,last 2 versions,Firefox ESR,not dead
 */
 
@@ -34,7 +31,7 @@ License URI:    https://www.gnu.org/licenses/gpl-3.0.html
   --color-accent2:  	hsl(44.52, 63.27%, 71.18%);
   --color-accent3:  	hsl(41.09, 73.99%, 56.27%);
   --color-neutral0: 	hsl(0, 0%, 93.33%);
-  --color-neutral1: 	hsl(0, 0%, 81.96%);
+  --color-neutral1: 	hsl(0, 0%, 82%);
   --color-neutral2: 	hsl(0, 0%, 58.04%);
   --color-neutral3: 	hsl(300, 0.52%, 37.45%);
   --color-neutral4: 	hsl(45, 5%, 15.69%);
@@ -472,8 +469,23 @@ blockquote.wu-blockquote-simple cite {
 .single-content .wp-block-kadence-image .alignleft,
 .single-content .wp-block-kadence-image .alignright,
 .wu-pattern-non-featured-image figure {
-	-webkit-margin-after: var(--global-xxs-spacing-em);
 	margin-block-end: var(--global-xxs-spacing-em);
+}
+
+.Card figure {
+	display: flex;
+	inline-size: 100%;
+	max-block-size: 20em !important;
+}
+
+.Card > figure > img.kb-img {
+	object-fit: cover;
+	flex: 1;
+	object-position: top;
+}
+
+.MAG > div {
+	padding-inline: 1.5rem !important;
 }
 
 .wp-block-kadence-image figcaption {
@@ -1030,25 +1042,75 @@ a,
 	padding: var(--global-xs-spacing) var(--global-md-spacing);
 }
 
+.Section-card.wu-empty-mag {
+	--color-gray1: hsl(0, 0%, 98.8%);
+	--color-neutral0: hsl(0, 0%, 88%);
+  background-color: var(--color-gray1);
+  border: 2px dashed var(--color-neutral0);
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.Section-card.wu-empty-mag .kt-inside-inner-col {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 1024px) {
+	.Section-card.wu-empty-mag {
+    visibility: hidden !important;
+		opacity: 0 !important;
+		block-size: 0 !important;
+		padding-block: 0 !important;
+		margin: 0 !important;
+		pointer-events: none !important;
+		display: none !important;
+  }
+}
+
 @media (max-width: 991px) {
   .MAG > .kt-row-column-wrap {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
+	/* .Section-card.wu-empty-mag {
+    visibility: hidden !important;
+		opacity: 0 !important;
+		block-size: 0 !important;
+		padding-block: 0 !important;
+		margin: 0 !important;
+		pointer-events: none !important;
+  } */
 }
 
 @media (pointer: coarse) and (max-width: 767px) {
 	.FULL {
 		border: 0 !important
 	}
-	.MAG > .kt-row-column-wrap {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
+
+	/* .Section-card.wu-empty-mag .kt-inside-inner-col:has(.wp-block-spacer) {
+    visibility: hidden !important;
+		opacity: 0 !important;
+		block-size: 0 !important;
+		padding-block: 0 !important;
+		margin: 0 !important;
+		pointer-events: none !important;
+  } */
 }
 
 @media (max-width: 599px) {
   .MAG > .kt-row-column-wrap {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+
+	/* .Section-card.wu-empty-mag .kt-inside-inner-col:has(.wp-block-spacer) {
+    visibility: hidden !important;
+		opacity: 0 !important;
+		block-size: 0 !important;
+		padding-block: 0 !important;
+		margin: 0 !important;
+		pointer-events: none !important;
+  } */
 }
 
 .wu-post-grid-container .kt-blocks-above-categories a,
