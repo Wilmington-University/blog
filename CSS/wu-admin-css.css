@@ -1,0 +1,166 @@
+/* WU COLOR PALETTE VARS */
+:root {
+  --color-primary0: #00843D;
+  --color-primary1: #F5FAF7;
+  --color-primary2: #DCF0DD;
+  --color-primary3: #73B474;
+  --color-primary4: #014E25;
+  --color-primary5: #005e2b;
+  --color-accent0: #F9C22B;
+  --color-accent1: #FDF2D2;
+  --color-accent2: #E4CC87;
+  --color-accent3: #E2AE3D;
+  --color-neutral0: #EEEEEE;
+  --color-neutral1: #D1D1D1;
+  --color-neutral2: #949494;
+  --color-neutral3: #605F60;
+  --color-neutral4: #2A2926;
+  --color-gray0: #ccc;
+  --color-gray1: #f5f5f5;
+  --color-white: #fff;
+  /* HSL COLORS */
+	--color-hsl-primary0: hsl(148 100% 25.88%);
+  --color-hsl-primary1: hsl(144 33% 97.06%);
+  --color-hsl-primary2: hsl(123 40% 90.2%);
+  --color-hsl-primary3: hsl(121 30% 57.84%);
+  --color-hsl-primary4: hsl(148 97% 15.49%);
+  --color-hsl-accent0: hsl(44 94% 57.25%);
+  --color-hsl-accent1: hsl(45 91% 90.78%);
+  --color-hsl-accent2: hsl(45 63% 71.18%);
+  --color-hsl-accent3: hsl(41 74% 56.27%);
+  --color-hsl-neutral0: hsl(0 0% 93.33%);
+  --color-hsl-neutral1: hsl(0 0% 81.96%);
+  --color-hsl-neutral2: hsl(0 0% 58.04%);
+  --color-hsl-neutral3: hsl(300 1% 37.45%);
+  --color-hsl-neutral4: hsl(45 5% 15.69%);
+  --color-hsl-gray0: hsl(0 0% 80%);
+  --color-hsl-gray1: hsl(0 0% 96.08%);
+	--color-hsl-white: hsl(0 0% 100%);
+	--color-bq-blue: rgba(0 92 255 / 54%);
+  /* RADIUS */
+  --radius-sm: 0.5rem /* 8px */;
+  --radius-md: 0.625rem /* 10px */;
+  --radius-lg: 1.625rem /* 26px , pill shape */;
+
+	/* SHADOWS */
+	--shadow-sm: 2px 2px 3px 0px rgba(0 0 0 / 40%);
+	--shadow-lg: 0 8px 24px 8px hsla(3 11% 44% / 16%),0 4px 8px 0 hsla(3 11% 44% / 24%);
+	--shadow-inset-dark: inset 0px 10px 15px -3px rgba(0 0 0 / 10%),inset -10px 10px 15px -3px rgba(0 0 0 / 10%),inset 0px -10px 15px -3px rgba(0 0 0 / 10%),inset 10px 0px 44px 0px rgba(0 0 0 / 10%);
+	--shadow-inset-light: inset 0px 10px 15px -3px rgba(180 180 180 / 10%),inset -10px 10px 15px -3px rgba(180 180 180 / 10%),inset 0px -10px 15px -3px rgba(180 180 180 / 10%),inset 10px 0px 44px 0px rgba(180 180 180 / 10%);
+	--shadow-outset-light: 0px 10px 15px -3px rgba(180 180 180 / 10%),-10px 10px 15px -3px rgba(180 180 180 / 10%),0px -10px 15px -3px rgba(180 180 180 / 10%),10px 0px 44px 0px rgba(180 180 180 / 10%);
+
+	/* TRANSITIONS */
+	--trans-colors: background 0.4s, color 0.4s;
+	--trans-shadow: box-shadow 0.4s, translate 0.4s;
+	--trans-move: transform 0.4s ease;
+	--trans-all-md: all 0.3s;
+
+	/* TYPOGRAPHY */
+	--letter-spacing-sm: 0.013em;
+	--font-base: proxima-nova, sans-serif;
+
+	/* SPACING */
+	--global-tiny-spacing-em: 0.25em;
+	--global-xxs-spacing-em: 0.5em;
+	--global-xs-spacing-em: 1em;
+	--global-sm-spacing-em: 1.5em;
+	--global-md-spacing-em: 2em;
+	--global-lg-spacing-em: 2.5em;
+	--global-lg2-spacing-em: 3em;
+	--global-xl-spacing-em: 3.5em;
+}
+
+/**** TABLE STYLES ****/
+.table-view-list.posts .column-post_id {
+  inline-size: 80px;
+  overflow: hidden
+}
+.table-view-list.posts .column-post_id {
+	inline-size: 5%;
+	overflow: hidden;
+	text-align: center;
+}
+
+td.featured_image.column-featured_image img {
+	inline-size: 100px;
+	block-size: 100px;
+	object-fit: contain;
+}
+
+.tags.column-tags {
+  /* display: block; */
+  inline-size: 95%;
+  max-block-size: 150px;
+  overflow: scroll;
+}
+
+/**** UTILITY CLASSES ****/
+.Flex {
+  display: flex;
+}
+.Flex-centerV {
+  align-items: center
+}
+.Flex-column {
+  flex-direction: column
+}
+
+/**** FESATURED IMAGE STYLES ****/
+#featured_image {
+  inline-size: 100px;
+}
+/**** some styles to make Quick Edit more beautiful ****/
+#WU_featured_image a.WU_upload_featured_image {
+  display: inline-block;
+  inline-size: 100%;
+}
+#WU_featured_image img {
+  display: block;
+  max-inline-size: 200px !important;
+  inline-size: auto;
+}
+#WU_featured_image .WU_remove_featured_image {
+  display: none;
+}
+#WU_featured_image .title {
+  display: block;
+  inline-size: auto;
+}
+#WU_featured_image {
+  padding-inline-end: 12px
+}
+.WU_upload_featured_image button {
+  padding: 0
+}
+.wu_featured {
+  margin: 0px 6px;
+}
+.wu_featured label {
+  inline-size: 100%;
+  margin: 0px
+}
+
+/**** COLOR SCHEME CSS ****/
+#WU_support_links_widget > .postbox-header {
+	background: var(--color-hsl-primary0);
+}
+
+#WU_support_links_widget h2 {
+	color: var(--color-hsl-primary1);
+}
+
+/**** REMOVE PLUGINS PRO NAGS ****/
+li:has(> a[href*="searchwp-algorithm"]),
+li:has(> a[href*="featured-images-for-rss-feeds-pricing"]),
+li:has(> [class*="searchwp-sidebar-upgrade-pro"]),
+li:has(> a[href*="code-snippets-welcome"]),
+li.searchwp-sidebar-upgrade-pro,
+.conditions-editor-open.block-form-field.no-condition,
+#akismet-setup-prompt,
+span.pro:has(> [aria-label="Upgrade to SearchWP Pro"]),
+span:has(> [title="Upgrade to Code Snippets Pro"]) {
+  display: none !important;
+  visibility: hidden !important;
+  inline-size: 0;
+  block-size: 0;
+}
